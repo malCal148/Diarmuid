@@ -1,0 +1,206 @@
+:root
+{
+    /*colour importing*/
+        /* CSS HEX */
+        --black: #000;
+        --white: #ffffffff;
+        --gold: #ffd400ff;
+        --chefchaouen-blue: #4392f1ff;
+        --slate-blue: #735cddff;
+
+        /*Gradient*/
+        
+    --poppins:'Poppins', sans-serif;
+    /*Fonts*/
+    --mainFont: 'Poppins', sans-serif;
+    --titleWeight:800;
+    --normalWeight:300;
+
+    /*colors*/
+    --mainFontColor:var(--black);
+    --mainBackgroundColor:var(--white);
+    --accent1:var(--gold);
+    --accent2:var(--chefchaouen-blue);
+    --accent3:var(--slate-blue);
+
+    /*Sizes*/
+    --mainFontSize:1vw;
+
+
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+  }
+
+.topnav {
+    background-color: var(--mainBackgroundColor);
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+    font-family: var(--otherFont);    
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+ 
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    font-weight: var(--titleWeight);
+    float: left;
+    display: block;
+    color: var(--accent1);
+    text-align: center;
+    padding: 14px 16px;
+    flex-grow: 1;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    color: var(--accent2);
+  }
+
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: var(--mainFont);
+    font-weight: var(--normalWeight);
+    color:var(--mainFontColor);
+    padding:0;
+    margin:0;
+
+    
+}
+
+.stack
+{
+    width: 96%;
+    height:30%;
+    padding: 2%;
+}
+
+.columns
+{
+    columns: 2;
+}
+
+p{
+    font-weight: var(--normalWeight);
+    color: var(--mainFontColor);
+    font-family: var(--mainFont);
+    font-weight: var(--normalWeight);
+}
+
+h1
+{
+    margin-left: 1%;
+    font-size: 2em;;
+    font-family: var(--mainFont);
+    font-weight: var(--titleWeight);
+}
+
+h4
+{
+    font-family: var(--mainFont);
+    font-weight: var(--normalWeight);
+}
+
+.container{
+    display: flex;
+    align-items: stretch;
+  }
+
+.box
+{   
+    flex-grow: 1;
+    margin-right: 1%;
+    
+}
+
+footer
+{
+    margin-top: 2%;
+    display: block;
+    background-color:var(--mainFontColor);
+    color:white;
+    float:left;
+    min-width: 94%;
+    max-width:94%;
+    padding:3%;
+    font-family: var(--otherFont);
+    font-weight: var(--titleWeight);
+}
+
+footer .miniNav
+{
+    display: flexbox;
+    width: 50%;
+    flex-wrap: wrap;
+
+}
+
+a.active
+{
+    color:var(--accent2);
+}
+
+a:hover
+{
+    color:var(--accent3);
+}
+
+@media (max-width: 920px) {
+    #logo {
+        font-size: 1em;
+    }
+
+    .content{
+        column-count: 2;
+    }
+
+    .topnav
+     {flex-direction: column-reverse;}
+  }
+  
+  @media (max-width: 600px) {
+    .product-card {
+      flex: 1 46%;
+    }
+
+    .content{
+        column-count: 1;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-filter {
+      flex-direction: column;
+    }
+  
+      .sort {
+      align-self: flex-start;
+    }
+
+    .content{
+        column-count: 1;
+    }
+  }
