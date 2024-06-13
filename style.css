@@ -158,12 +158,12 @@ h4
 
 .stack:nth-of-type(2) {
     background:var(--backAccent1);
-    padding-top: 3%;
+    padding-top: 5%;
   }
 
   .stack:nth-of-type(3) {
     background:var(--backAccent3);
-    padding-bottom:3%;
+    padding-bottom:5%;
     
   }
 
