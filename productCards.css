@@ -95,6 +95,13 @@
     .product-filter {
       flex-direction: column;
     }
+
+    @media (max-width: 600px) {
+        .product-card {
+          flex: 1 46%;
+          border-radius: 5%;
+        }
+      }
   
       .sort {
       align-self: flex-start;

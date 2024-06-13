@@ -25,7 +25,7 @@
     --accent2:var(--persian-pink);
     --accent3:var(--salmon-pink);
 
-    --backAccent1:rgba(255, 105, 235, 0.136);
+    --backAccent1:#ff69eb23;
     --backAccent2:rgba(255, 105, 235, 0.118);
     --backAccent3:rgba(255, 192, 129, 0.127);
     
@@ -78,6 +78,14 @@ h2 {
     flex-grow: 1;
     justify-content: space-between;
     text-decoration: none;
+  }
+
+  .miniNav a{
+    color: var(--accent1);
+  }
+
+  .miniNav a :active{
+    color:var(--accent3);
   }
   
   /* Change color on hover */
@@ -157,14 +165,106 @@ h4
     
   }
 
-  .custom-shape-divider-top-1718237219 {
+
+
+  .custom-shape-divider-top-1718238605 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    color: var(--mainBackgroundColor);
+}
+
+.custom-shape-divider-bottom-1718240330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718240330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+}
+
+.custom-shape-divider-bottom-1718240330 .shape-fill {
+    fill: #FFFFFF;
+}.custom-shape-divider-bottom-1718240330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718240330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+}
+
+.custom-shape-divider-bottom-1718240330 .shape-fill {
+    fill: #FFFFFF;
+}.custom-shape-divider-bottom-1718240330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718240330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+}
+
+.custom-shape-divider-bottom-1718240330 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1718238605 svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 89px;
+}
+
+.custom-shape-divider-top-1718238605 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1718240396 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1718240396 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 31px;
+}
+
+.custom-shape-divider-bottom-1718240396 .shape-fill {
+    fill: #FFFFFF;
 }
 footer
 {
@@ -179,7 +279,12 @@ footer
     font-family: var(--otherFont);
     font-weight: var(--titleWeight);
 }
-
+  @media (max-width: 600px) {
+    .product-card {
+      flex: 1 46%;
+      border-radius: 5%;
+    }
+  }
 footer .miniNav
 {
     display: flexbox;
@@ -190,7 +295,7 @@ footer .miniNav
 
 a.active
 {
-    color:var(--accent2);
+    color:var(--accent3);
 }
 
 a:hover
@@ -237,8 +342,8 @@ a:hover
       align-self: flex-start;
     }
 
-    .topnav a{display: none;}
-
+     a.dontShow{display: none;}
+    div.dontShow{display: none;}
     .content{
         column-count: 1;
     }
