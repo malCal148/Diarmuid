@@ -4,9 +4,11 @@
     /* CSS HEX */
     --ultra-pink: #ff69ebff;
     --persian-pink: #ff86c8ff;
-    --salmon-pink: #ffa3a5ff;
+    --salmon-pink: #ffbf81ff;
     --black: #000000ff;
     --white: #ffffffff;
+
+
 
         /*Gradient*/
         
@@ -23,11 +25,19 @@
     --accent2:var(--persian-pink);
     --accent3:var(--salmon-pink);
 
+    --backAccent1:rgba(255, 105, 235, 0.136);
+    --backAccent2:rgba(255, 105, 235, 0.118);
+    --backAccent3:rgba(255, 192, 129, 0.127);
+    
 
     /*Sizes*/
     --mainFontSize:1vw;
 
 
+}
+
+h2 {
+    text-align: center;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -97,6 +107,7 @@ body
     width: 96%;
     height:30%;
     padding: 2%;
+    position: relative;
 }
 
 .columns
@@ -137,6 +148,24 @@ h4
     
 }
 
+.stack:nth-of-type(2) {
+    background:var(--backAccent1);
+  }
+
+  .stack:nth-of-type(3) {
+    background:var(--backAccent3);
+    
+  }
+
+  .custom-shape-divider-top-1718237219 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    color: var(--mainBackgroundColor);
+}
 footer
 {
     margin-top: 2%;
@@ -174,12 +203,19 @@ a:hover
         font-size: 1em;
     }
 
-    .content{
-        column-count: 2;
+    .columns{
+        column-count: 1;
+        text-align: center;
+        padding:2%;
     }
 
     .topnav
      {flex-direction: column-reverse;}
+
+     .container
+     {
+        flex-direction: column-reverse;
+     }
   }
   
   @media (max-width: 600px) {
@@ -200,6 +236,8 @@ a:hover
       .sort {
       align-self: flex-start;
     }
+
+    .topnav a{display: none;}
 
     .content{
         column-count: 1;
